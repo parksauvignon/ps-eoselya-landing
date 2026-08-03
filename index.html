@@ -113,8 +113,8 @@ button{font:inherit;border:0;background:0;cursor:pointer;color:inherit;}
   text-transform:uppercase;color:var(--olive);margin-bottom:16px;
 }
 .eyebrow::before{content:'';width:26px;height:1px;background:var(--olive);}
-.-dark .eyebrow{color:var(--navy);}
-.-dark .eyebrow::before{background:var(--navy);}
+.-dark .eyebrow{color:var(--white);}
+.-dark .eyebrow::before{background:var(--white);}
 
 .h2{
   font-size:var(--fs-h2);font-weight:500;line-height:var(--lh-head);
@@ -124,8 +124,8 @@ button{font:inherit;border:0;background:0;cursor:pointer;color:inherit;}
 .h2.-oneline{max-width:none;text-wrap:nowrap;}
 @media(max-width:900px){.h2.-oneline{text-wrap:balance;}}
 .h2 .em{color:var(--olive);}
-.-dark .h2{color:var(--cream);}
-.-dark .h2 .em{color:var(--navy);}
+.-dark .h2{color:var(--white);}
+.-dark .h2 .em{color:var(--white);font-weight:600;}
 
 .h3{font-size:var(--fs-h3);font-weight:500;line-height:1.22;letter-spacing:var(--tr-head);color:var(--navy);}
 .h4{font-size:var(--fs-h4);font-weight:500;line-height:1.3;color:var(--navy);}
@@ -135,7 +135,7 @@ button{font:inherit;border:0;background:0;cursor:pointer;color:inherit;}
   font-size:var(--fs-lead);line-height:var(--lh-body);color:var(--gray);
   text-wrap:pretty;
 }
-.-dark .lead{color:var(--cream);}
+.-dark .lead{color:var(--white);}
 
 .sm{font-size:var(--fs-sm);color:var(--gray);line-height:1.55;}
 .xs{font-size:var(--fs-xs);color:var(--gray);}
@@ -287,20 +287,20 @@ button{font:inherit;border:0;background:0;cursor:pointer;color:inherit;}
 .rate:last-child{border-right:0;background:var(--olive);color:var(--cream);}
 .rate__n{display:flex;align-items:baseline;gap:16px;}
 .rate__n b{font-size:var(--fs-num);font-weight:400;line-height:.92;letter-spacing:var(--tr-display);color:var(--olive);}
-.rate:last-child .rate__n b{color:var(--navy);}
+.rate:last-child .rate__n b{color:var(--white);}
 .rate__n em{font-style:normal;font-size:var(--fs-sm);color:var(--gray);line-height:1.4;}
-.rate:last-child .rate__n em{color:rgba(247,245,242,.92);}
+.rate:last-child .rate__n em{color:var(--white);}
 .rate__who{margin-top:18px;font-size:var(--fs-h4);font-weight:500;color:var(--navy);}
-.rate:last-child .rate__who{color:var(--cream);}
+.rate:last-child .rate__who{color:var(--white);}
 .rate__for{margin-top:8px;font-size:var(--fs-sm);color:var(--gray);line-height:1.5;}
-.rate:last-child .rate__for{color:rgba(247,245,242,.92);}
+.rate:last-child .rate__for{color:var(--white);}
 .rate dl{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);display:grid;gap:13px;}
 .rate:last-child dl{border-top-color:rgba(247,245,242,.3);}
 .rate dl > div{display:flex;justify-content:space-between;gap:16px;font-size:var(--fs-sm);}
 .rate dt{color:var(--gray);}
 .rate dd{font-weight:500;text-align:right;}
-.rate:last-child dt{color:rgba(247,245,242,.88);}
-.rate:last-child dd{color:var(--cream);}
+.rate:last-child dt{color:var(--white);}
+.rate:last-child dd{color:var(--white);}
 
 .common{margin-top:16px;padding:30px clamp(28px,4vw,48px);background:var(--white);border:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .common b{display:block;font-size:var(--fs-h3);font-weight:500;letter-spacing:var(--tr-head);}
@@ -348,12 +348,13 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 .pick button b{display:block;font-size:var(--fs-h3);font-weight:600;color:var(--navy);margin-bottom:2px;letter-spacing:var(--tr-head);}
 .pick button.is-on{background:var(--olive);color:rgba(255,255,255,.85);}
 .pick button.is-on b{color:var(--white);}
-.calc__sum{font-size:var(--fs-num);font-weight:500;line-height:1;letter-spacing:var(--tr-display);color:var(--navy);margin-top:14px;}
-.calc__sum i{font-style:normal;font-size:.24em;font-weight:500;color:rgba(247,245,242,.9);margin-left:8px;letter-spacing:0;}
+.calc__sum{font-size:var(--fs-num);font-weight:500;line-height:1;letter-spacing:var(--tr-display);color:var(--white);margin-top:14px;}
+.calc__sum i{font-style:normal;font-size:.24em;font-weight:500;color:var(--white);margin-left:8px;letter-spacing:0;}
 .calc__rows{margin-top:26px;padding-top:20px;border-top:1px solid rgba(247,245,242,.3);display:grid;gap:12px;}
 .calc__rows div{display:flex;justify-content:space-between;gap:16px;font-size:var(--fs-sm);}
-.calc__rows span{color:rgba(247,245,242,.88);}
-.calc__rows b{font-weight:500;color:var(--cream);}
+.calc__rows span{color:var(--white);}
+.calc__rows b{font-weight:600;color:var(--white);}
+.calc__cap{margin-top:14px;font-size:var(--fs-xs);color:var(--white);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.16);}
 
 /* ── Квартири ───────────────────────────────────────────── */
 .flats{margin-top:clamp(40px,5vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:24px;}
@@ -438,7 +439,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 /* ── Заявка ─────────────────────────────────────────────── */
 .get{display:grid;grid-template-columns:1fr minmax(380px,440px);gap:clamp(40px,5vw,72px);align-items:center;}
 .promises{display:grid;gap:15px;margin-top:28px;}
-.promises div{display:flex;gap:14px;align-items:flex-start;font-size:var(--fs-sm);color:var(--cream);line-height:1.5;}
+.promises div{display:flex;gap:14px;align-items:flex-start;font-size:var(--fs-sm);color:var(--white);line-height:1.5;}
 .promises i{width:25px;height:25px;flex-shrink:0;border-radius:50%;background:var(--yellow);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;}
 .form{background:var(--cream);padding:clamp(30px,3.4vw,42px);color:var(--navy);}
 .form__sub{margin-top:5px;font-size:var(--fs-sm);color:var(--gray);}
@@ -737,7 +738,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 
     <div class="rates" data-in>
       <div class="rate">
-        <div class="rate__n"><b>3%</b><em>річних<br>реальна ~3,98%</em></div>
+        <div class="rate__n"><b>3%</b><em>перші 10 років<br>реальна ~4,61%</em></div>
         <div class="rate__who">Окрема категорія</div>
         <div class="rate__for">Військові, медики, вчителі, науковці, ВПО, ветерани</div>
         <dl>
@@ -747,21 +748,21 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         </dl>
       </div>
       <div class="rate">
-        <div class="rate__n"><b>7%</b><em>річних<br>реальна ~8,21%</em></div>
+        <div class="rate__n"><b>7%</b><em>перші 10 років<br>реальна ~8,72%</em></div>
         <div class="rate__who">Масова іпотека</div>
         <div class="rate__for">Громадяни без житла або з площею до 52,5 м²</div>
         <dl>
-          <div><dt>Ставка</dt><dd>7% на весь строк</dd></div>
+          <div><dt>Перші 10 років</dt><dd>7%</dd></div>
+          <div><dt>З 11 року</dt><dd>10%</dd></div>
           <div><dt>Строк</dt><dd>до 20 років</dd></div>
-          <div><dt>Молодь до 25 років</dt><dd>до 10 років, внесок від 10%</dd></div>
         </dl>
       </div>
     </div>
 
     <div class="common" data-in>
       <div><b>До <i>6 000 000 ₴</i></b><span>Максимальна сума кредиту</span></div>
-      <div><b>Від <i>20–30%</i></b><span>Перший внесок (10% для молоді до 25 років)</span></div>
-      <div><b>До <i>0,25% / рік</i></b><span>Страхування іпотеки від вартості житла</span></div>
+      <div><b>Від <i>30%</i></b><span>Перший внесок на первинному ринку. Від 20% на вторинному, від 10% для позичальників до 25 років</span></div>
+      <div><b><i>1%</i> + до <i>0,25%/рік</i></b><span>Разова комісія від суми кредиту та страхування предмета іпотеки</span></div>
     </div>
 
     <div class="tabs" data-tabs data-in>
@@ -775,7 +776,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
           <div class="req"><h4 class="h4">Громадянство</h4><p>Громадянин України.</p></div>
           <div class="req"><h4 class="h4">Вік</h4><p>Від 18 до 70 років на дату повного погашення кредиту.</p></div>
           <div class="req"><h4 class="h4">Офіційний дохід</h4><p>Підтверджений дохід, достатній для обслуговування кредиту.</p></div>
-          <div class="req"><h4 class="h4">Нерухомість у власності</h4><p>Відсутня або площею не більшою за 52,5 м² + 21 м² на кожного члена сім'ї.</p></div>
+          <div class="req"><h4 class="h4">Нерухомість у власності</h4><p>Відсутня або площею до 52,5 м² для однієї особи, до 73,5 м² для сім'ї з 2–3 осіб, далі +21 м² на кожного наступного.</p></div>
           <div class="req"><h4 class="h4">Санкційні списки</h4><p>Ви не фігуруєте в санкційних реєстрах.</p></div>
           <div class="req"><h4 class="h4">Попередня підтримка</h4><p>Ви та члени сім'ї не маєте чинних кредитів у рамках єОселі.</p></div>
         </div>
@@ -791,7 +792,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
           </ul>
         </div>
         <div class="reqs">
-          <div class="req"><h4 class="h4">Нормативна площа</h4><p>52,5 м² для 1–2 осіб + 21 м² на кожного наступного. Максимум 115,5 м².</p></div>
+          <div class="req"><h4 class="h4">Нормативна площа</h4><p>52,5 м² для однієї особи, 73,5 м² для сім'ї з 2–3 осіб, далі +21 м² на кожного наступного члена сім'ї. Максимум 115,5 м².</p></div>
           <div class="req"><h4 class="h4">Вік будівлі — для ВПО</h4><p>Не старша за <strong>20 років</strong> у всіх регіонах дії програми.</p></div>
           <div class="req"><h4 class="h4">Вік будівлі — інші категорії</h4><p>Будується або не старша за <strong>3 роки</strong> від дати введення в експлуатацію.</p></div>
           <div class="req -on"><h4 class="h4">Будинок №7 підходить</h4><p>Введений в експлуатацію. Планування повністю вписуються в нормативи єОселі.</p></div>
@@ -825,12 +826,12 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
     <div class="calc" data-calc data-in>
       <div class="calc__in">
         <div class="fld">
-          <div class="fld__top"><span class="caps">Вартість квартири</span><b data-price-l>3 200 000 грн</b></div>
-          <input type="range" data-price min="1500000" max="6000000" step="50000" value="3200000" aria-label="Вартість квартири">
+          <div class="fld__top"><span class="caps">Вартість квартири</span><b data-price-l>3 700 000 грн</b></div>
+          <input type="range" data-price min="1500000" max="8000000" step="50000" value="3700000" aria-label="Вартість квартири">
         </div>
         <div class="fld">
-          <div class="fld__top"><span class="caps">Перший внесок</span><b data-down-l>20% · 640 000 грн</b></div>
-          <input type="range" data-down min="10" max="50" step="1" value="20" aria-label="Перший внесок, відсоток">
+          <div class="fld__top"><span class="caps">Перший внесок</span><b data-down-l>30% · 1 110 000 грн</b></div>
+          <input type="range" data-down min="10" max="70" step="1" value="30" aria-label="Перший внесок, відсоток">
         </div>
         <div class="fld">
           <div class="fld__top"><span class="caps">Строк кредиту</span><b data-term-l>20 років</b></div>
@@ -846,18 +847,19 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       </div>
       <div class="calc__out">
         <div>
-          <span class="caps" style="color:rgba(247,245,242,.92)">Щомісячний платіж</span>
-          <div class="calc__sum"><span data-monthly>14 200</span><i>грн / міс</i></div>
+          <span class="caps" style="color:#fff">Платіж перші 10 років</span>
+          <div class="calc__sum"><span data-monthly>14 366</span><i>грн / міс</i></div>
           <div class="calc__rows">
-            <div><span>Сума кредиту</span><b><span data-loan>2 560 000</span> грн</b></div>
-            <div><span>Загальна виплата</span><b><span data-total>4 048 000</span> грн</b></div>
-            <div><span>Переплата</span><b><span data-over>848 000</span> грн</b></div>
+            <div><span>Платіж з 11 року <span data-rate2>(6%)</span></span><b><span data-monthly2>18 559</span> грн</b></div>
+            <div><span>Сума кредиту</span><b><span data-loan>2 590 000</span> грн</b></div>
+            <div><span>Загальна виплата</span><b><span data-total>5 065 000</span> грн</b></div>
           </div>
+          <p class="calc__cap" data-cap hidden>Максимальна сума кредиту за єОселею — 6 000 000 ₴. Різницю потрібно внести як перший внесок.</p>
         </div>
         <a href="#contact" class="btn -yellow -full">Перевірити, чи підходжу <span class="arr"></span></a>
       </div>
     </div>
-    <p class="foot-note" data-in>Розрахунок орієнтовний і базується на ануїтетній формулі для тіла кредиту. Не враховує разові комісії та страхування.</p>
+    <p class="foot-note" data-in>Розрахунок орієнтовний: ануїтетна формула, пільгова ставка діє перші 10 років, далі 6% або 10% річних. Не враховує разову комісію 1%, страхування та послуги третіх осіб. Точну суму надає банк.</p>
   </div>
 </section>
 
@@ -874,17 +876,17 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         <div class="flat__body">
           <div>
             <div class="flat__name">2-кімнатна квартира</div>
-            <div class="flat__area">67–75 м² · стелі 3 м</div>
+            <div class="flat__area">67,1–74,6 м² · стелі 3 м</div>
           </div>
           <div class="flat__specs">
             <div><span class="xs">Вікна</span><b>5-камерні</b></div>
-            <div><span class="xs">Опалення</span><b>Bosch</b></div>
+            <div><span class="xs">Опалення</span><b>Індивідуальне газове</b></div>
             <div><span class="xs">Стан</span><b>Зданий</b></div>
           </div>
-          <span class="tag">У ліміті єОселі — сім'я з 2 осіб</span>
+          <span class="tag">У ліміті єОселі — сім'я з 2–3 осіб</span>
           <div class="flat__pay">
-            <span class="xs">Орієнтовний платіж за ставкою 3%</span>
-            <b>від 14 000<i>грн / міс</i></b>
+            <span class="xs">Орієнтовний платіж перші 10 років за ставкою 3%</span>
+            <b>від 12 900<i>грн / міс</i></b>
           </div>
           <a href="#contact" class="btn -olive -full">Перевірити, чи підходжу <span class="arr"></span></a>
         </div>
@@ -894,17 +896,17 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         <div class="flat__body">
           <div>
             <div class="flat__name">3-кімнатна квартира</div>
-            <div class="flat__area">90–92 м² · стелі 3 м</div>
+            <div class="flat__area">90,6–91,7 м² · стелі 3 м</div>
           </div>
           <div class="flat__specs">
             <div><span class="xs">Вікна</span><b>5-камерні</b></div>
-            <div><span class="xs">Опалення</span><b>Bosch</b></div>
+            <div><span class="xs">Опалення</span><b>Індивідуальне газове</b></div>
             <div><span class="xs">Стан</span><b>Зданий</b></div>
           </div>
-          <span class="tag">У ліміті єОселі — сім'я з 3 осіб</span>
+          <span class="tag">У ліміті єОселі — сім'я з 4 осіб</span>
           <div class="flat__pay">
-            <span class="xs">Орієнтовний платіж за ставкою 3%</span>
-            <b>від 19 500<i>грн / міс</i></b>
+            <span class="xs">Орієнтовний платіж перші 10 років за ставкою 3%</span>
+            <b>від 17 400<i>грн / міс</i></b>
           </div>
           <a href="#contact" class="btn -olive -full">Перевірити, чи підходжу <span class="arr"></span></a>
         </div>
@@ -975,7 +977,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       </details>
       <details name="faq">
         <summary>Чи підходять квартири за площею для єОселі?<i></i></summary>
-        <p class="faq__a">Так. Ліміт єОселі — 52,5 м² плюс 21 м² на кожного наступного члена сім'ї. 2-кімнатна (67–75 м²) підходить для сім'ї з 2 осіб (ліміт 73,5 м²), 3-кімнатна (90–92 м²) — для сім'ї з 3 осіб (ліміт 94,5 м²).</p>
+        <p class="faq__a">Так. Нормативна площа за єОселею — 52,5 м² для однієї особи та 73,5 м² для сім'ї з двох або трьох осіб, далі плюс 21 м² на кожного наступного. 2-кімнатна (67–75 м²) вписується в ліміт сім'ї з 2–3 осіб, 3-кімнатна (90–92 м²) — сім'ї з 4 осіб (ліміт 94,5 м²).</p>
       </details>
       <details name="faq">
         <summary>Я вчитель або лікар — яка в мене ставка?<i></i></summary>
@@ -1103,17 +1105,28 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 (()=>{const r=document.querySelector('[data-calc]');if(!r)return;const $=s=>r.querySelector(s);
   const price=$('[data-price]'),down=$('[data-down]'),term=$('[data-term]'),rates=r.querySelectorAll('[data-rate]');
   const fmt=n=>Math.round(n).toLocaleString('uk-UA').replace(/ /g,' ');
+  const CAP=6000000;                       // максимальна сума кредиту за єОселею
+  const pay=(L,pct,n)=>{const i=pct/100/12;return L?L*i*Math.pow(1+i,n)/(Math.pow(1+i,n)-1):0;};
   const calc=()=>{const P=+price.value,d=+down.value,y=+term.value;
     const rb=r.querySelector('[data-rate].is-on')||rates[0],pct=+rb.dataset.rate;
-    const loan=P*(1-d/100),i=pct/100/12,n=y*12;
-    const m=loan?loan*i*Math.pow(1+i,n)/(Math.pow(1+i,n)-1):0,total=m*n+P*d/100;
-    $('[data-monthly]').textContent=fmt(m);
+    const pct2=pct===3?6:10;               // з 11 року ставка змінюється (презентація Ощадбанку)
+    const want=P*(1-d/100), loan=Math.min(want,CAP), n=y*12;
+    const m1=pay(loan,pct,n);
+    // перші 10 років — за пільговою ставкою, далі залишок тіла перераховується під нову
+    const k=Math.min(120,n), i1=pct/100/12;
+    const bal=k<n?loan*Math.pow(1+i1,k)-m1*(Math.pow(1+i1,k)-1)/i1:0;
+    const m2=k<n?pay(bal,pct2,n-k):0;
+    const total=m1*k+m2*Math.max(0,n-k)+(P-loan);
+    $('[data-monthly]').textContent=fmt(m1);
+    $('[data-monthly2]').textContent=m2?fmt(m2):'—';
+    $('[data-rate2]').textContent='('+pct2+'%)';
     $('[data-loan]').textContent=fmt(loan);
     $('[data-total]').textContent=fmt(total);
-    $('[data-over]').textContent=fmt(total-P);
     $('[data-price-l]').textContent=fmt(P)+' грн';
-    $('[data-down-l]').textContent=d+'% · '+fmt(P*d/100)+' грн';
-    $('[data-term-l]').textContent=y+' років';};
+    const realDown=P-loan, realPct=P?Math.round(realDown/P*100):d;
+    $('[data-down-l]').textContent=realPct+'% · '+fmt(realDown)+' грн';
+    $('[data-term-l]').textContent=y+' років';
+    const cap=$('[data-cap]'); if(cap) cap.hidden = want<=CAP;};
   [price,down,term].forEach(el=>el.addEventListener('input',calc));
   rates.forEach(b=>b.addEventListener('click',()=>{rates.forEach(x=>x.classList.remove('is-on'));b.classList.add('is-on');calc();}));
   calc();})();
