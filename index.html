@@ -394,12 +394,13 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 .bank.-star{box-shadow:inset 0 3px 0 var(--yellow);}
 
 /* ── Галерея ────────────────────────────────────────────── */
-.gal{margin-top:clamp(40px,5vw,56px);}
+.gal{margin-top:clamp(56px,7vw,90px);}
+.gal > .h2{margin-bottom:clamp(22px,2.6vw,34px);}
 .gal__track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;}
 .gal__track::-webkit-scrollbar{height:3px;}
 .gal__track::-webkit-scrollbar-track{background:var(--line);}
 .gal__track::-webkit-scrollbar-thumb{background:var(--olive);}
-.gal__track figure{flex:0 0 auto;width:clamp(258px,31vw,420px);height:320px;scroll-snap-align:start;overflow:hidden;cursor:zoom-in;background:var(--line-soft);}
+.gal__track figure{flex:0 0 auto;width:clamp(258px,42vw,620px);height:clamp(320px,31vw,460px);scroll-snap-align:start;overflow:hidden;cursor:zoom-in;background:var(--line-soft);}
 .gal__track img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow);}
 .gal__track figure:hover img{transform:scale(1.05);}
 .gal__nav{display:flex;gap:10px;margin-top:20px;}
@@ -614,7 +615,6 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       <p class="hero__sub">Малоповерховий комплекс біля моря з власною парковою зоною. Допоможемо перевірити, підібрати та оформити — від першого дзвінка до ключів.</p>
       <div class="hero__cta">
         <a href="#contact" class="btn -yellow">Перевірити, чи підходжу <span class="arr"></span></a>
-        <a href="#complex" class="btn -ghost">Про комплекс</a>
       </div>
     </div>
   </div>
@@ -636,7 +636,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         </div>
       </div>
       <div class="about__pic" data-in>
-        <img src="photos/landscape2.webp" alt="Будинки ЖК «Парк Совіньйон» серед зелені" loading="lazy">
+        <img src="photos/house7.webp" alt="Будинок №7 ЖК «Парк Совіньйон» серед зелені" loading="lazy" width="1046" height="1300">
         <div class="about__flag">
           <b>Будинок №7 зданий</b>
           <span>Заселений і готовий до заїзду одразу після угоди</span>
@@ -683,7 +683,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         </div>
       </article>
       <article class="card">
-        <figure><img src="photos/lobby.webp" alt="Сервіси на території комплексу" loading="lazy"></figure>
+        <figure><img src="photos/restaurant.webp" alt="Ресторан Sapori Sauvignon на території комплексу" loading="lazy" width="1200" height="984"></figure>
         <div class="card__txt">
           <h3 class="h4">Інфраструктура</h3>
           <p>Ресторан, пілатес-студія, медична лабораторія та поштомат «Нова Пошта». Продуктовий супермаркет — за 100 метрів.</p>
@@ -703,6 +703,25 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
           <p>Комплекс обслуговує власна управляюча компанія, яка забезпечує його життєдіяльність і надає сервіс на високому професійному рівні.</p>
         </div>
       </article>
+    </div>
+
+    <div class="gal" data-in>
+      <h2 class="h2">Фото <span class="em">проєкту</span></h2>
+      <div class="gal__track" data-track>
+        <figure data-lb="photos/facade.webp"><img src="photos/facade.webp" alt="Фасади будинків" loading="lazy"></figure>
+        <figure data-lb="photos/house7.webp"><img src="photos/house7.webp" alt="Будинок №7" loading="lazy"></figure>
+        <figure data-lb="photos/houses.webp"><img src="photos/houses.webp" alt="Архітектурний ансамбль комплексу" loading="lazy"></figure>
+        <figure data-lb="photos/park.webp"><img src="photos/park.webp" alt="Парк комплексу" loading="lazy"></figure>
+        <figure data-lb="photos/evening.webp"><img src="photos/evening.webp" alt="Двір увечері" loading="lazy"></figure>
+        <figure data-lb="photos/sports.webp"><img src="photos/sports.webp" alt="Дитячі майданчики" loading="lazy"></figure>
+        <figure data-lb="photos/landscape.webp"><img src="photos/landscape.webp" alt="Прогулянкові алеї" loading="lazy"></figure>
+        <figure data-lb="photos/restaurant.webp"><img src="photos/restaurant.webp" alt="Ресторан Sapori Sauvignon" loading="lazy"></figure>
+        <figure data-lb="photos/landscape2.webp"><img src="photos/landscape2.webp" alt="Благоустрій території" loading="lazy"></figure>
+      </div>
+      <div class="gal__nav">
+        <button data-prev aria-label="Попереднє фото">‹</button>
+        <button data-next aria-label="Наступне фото">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -827,7 +846,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       <div class="calc__in">
         <div class="fld">
           <div class="fld__top"><span class="caps">Вартість квартири</span><b data-price-l>3 700 000 грн</b></div>
-          <input type="range" data-price min="1500000" max="8000000" step="50000" value="3700000" aria-label="Вартість квартири">
+          <input type="range" data-price min="3300000" max="8000000" step="50000" value="3700000" aria-label="Вартість квартири">
         </div>
         <div class="fld">
           <div class="fld__top"><span class="caps">Перший внесок</span><b data-down-l>30% · 1 110 000 грн</b></div>
@@ -939,33 +958,8 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
   </div>
 </section>
 
-<!-- ══ 9. ГАЛЕРЕЯ ══ -->
-<section class="sect -white">
-  <div class="wrap">
-    <div data-in>
-      <h2 class="h2">Фото <span class="em">проєкту</span></h2>
-    </div>
-    <div class="gal" data-in>
-      <div class="gal__track" data-track>
-        <figure data-lb="photos/facade.webp"><img src="photos/facade.webp" alt="Фасади будинків" loading="lazy"></figure>
-        <figure data-lb="photos/houses.webp"><img src="photos/houses.webp" alt="Архітектурний ансамбль комплексу" loading="lazy"></figure>
-        <figure data-lb="photos/park.webp"><img src="photos/park.webp" alt="Парк комплексу" loading="lazy"></figure>
-        <figure data-lb="photos/evening.webp"><img src="photos/evening.webp" alt="Двір увечері" loading="lazy"></figure>
-        <figure data-lb="photos/sports.webp"><img src="photos/sports.webp" alt="Дитячі майданчики" loading="lazy"></figure>
-        <figure data-lb="photos/landscape.webp"><img src="photos/landscape.webp" alt="Прогулянкові алеї" loading="lazy"></figure>
-        <figure data-lb="photos/lobby.webp"><img src="photos/lobby.webp" alt="Вхідна група" loading="lazy"></figure>
-        <figure data-lb="photos/landscape2.webp"><img src="photos/landscape2.webp" alt="Благоустрій території" loading="lazy"></figure>
-      </div>
-      <div class="gal__nav">
-        <button data-prev aria-label="Попереднє фото">‹</button>
-        <button data-next aria-label="Наступне фото">›</button>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ 10. ПИТАННЯ ══ -->
-<section class="sect -cream" id="faq">
+<section class="sect -white" id="faq">
   <div class="wrap">
     <div data-in>
       <h2 class="h2">Найчастіші <span class="em">запитання</span></h2>
@@ -1049,7 +1043,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
     <div class="foot__top">
       <div>
         <a href="#top"><img src="img/logo-white.png" alt="Парк Совіньйон"></a>
-        <p class="foot__tag">ЖК «Парк Совіньйон» — малоповерховий житловий комплекс в Одесі. Будинок №7 зданий, заїзд одразу за програмою «єОселя». Забудовник ЗАРС — 30 років преміальної нерухомості.</p>
+        <p class="foot__tag">ЖК «Парк Совіньйон» — малоповерховий житловий комплекс в Одесі. Забудовник ЗАРС — 30 років преміальної нерухомості.</p>
       </div>
       <div class="foot__r">
         <a href="tel:+380487887766" onclick="trackPhone('footer')">+380 (48) 788-77-66</a>
